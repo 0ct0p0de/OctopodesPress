@@ -343,6 +343,21 @@ Navbar
 }
 /*
 =============== 
-
+Hero
 ===============
 */
+
+.hero-text h1{
+  text-align: center;
+}
+
+.hero-text h4{
+  text-align: center;
+  text-decoration: underline;
+  padding-inline: 2rem;
+}
+
+.hero-text p{
+  padding-inline: 4rem;
+  text-indent: 1.5rem;
+}
