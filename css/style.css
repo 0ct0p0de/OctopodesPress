@@ -7,6 +7,7 @@
 
 html {
   font-size: 100%;
+  scrollbar-color: #689189 #1d3f39 ;
 } /*16px*/
 
 :root {
@@ -70,6 +71,9 @@ body {
   font-size: 16px;
   line-height: 1.75;
   color: var(--textColor);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 @media screen and (max-width: 768px) {
@@ -300,7 +304,7 @@ Navbar
 }
 
 .nav-btn i {
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .nav-links {
@@ -334,11 +338,17 @@ Navbar
     .nav-header h1 {
         font-size: 3rem;
     }
+    .nav-btn i {
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (min-width: 1200px){
     .nav-header h1 {
         font-size: 5rem;
+    }
+    .nav-btn i {
+        font-size: 2rem;
     }
 }
 /*
@@ -347,8 +357,15 @@ Hero
 ===============
 */
 
+.hero-container {
+  margin: 2rem 5%;
+  outline: 2px solid var(--primary-700);
+  background: var(--primary-300);
+}
+
 .hero-text h1{
   text-align: center;
+  font: #1d3f39;
 }
 
 .hero-text h4{
@@ -360,4 +377,66 @@ Hero
 .hero-text p{
   padding-inline: 4rem;
   text-indent: 1.5rem;
+}
+
+.hero-text a{
+  color: var(--primary-800);
+  text-decoration: none;
+}
+
+.hero-text a:hover{
+  color: var(--primary-200);
+}
+
+.hero-text a:visited{
+  color: var(--primary-900);
+}
+
+.hero-text a:active{
+  color: var(--primary-200);
+}
+
+
+
+/*
+=============== 
+Footer
+===============
+*/ 
+.page-footer{
+  background-color: var(--primary-700);
+  margin-top: auto;
+  padding-left: 10px;
+  text-align: center;
+}
+
+.page-footer p{
+  background-color: var(--primary-700);
+  color: var(--primary-100);
+ 
+}
+
+
+/*
+=============== 
+Custom scrollbar for all but Firefox
+(Firefox's in <html> above) 
+===============
+*/ 
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-600); 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-300);
+  border: 2px solid var(--primary-900);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-200); 
 }
