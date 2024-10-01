@@ -334,7 +334,7 @@ Navbar
     color: var(--primary-500);
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 700px){
     .nav-header h1 {
         font-size: 3rem;
     }
@@ -358,9 +358,12 @@ Hero
 */
 
 .hero-container {
-  margin: 2rem 5%;
+  margin: 5%;
   outline: 2px solid var(--primary-700);
   background: var(--primary-300);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .hero-text h1{
@@ -375,7 +378,8 @@ Hero
 }
 
 .hero-text p{
-  padding-inline: 4rem;
+  padding-inline: 7%;
+  padding-bottom: 3%;
   text-indent: 1.5rem;
 }
 
@@ -396,7 +400,21 @@ Hero
   color: var(--primary-200);
 }
 
+.hero-screenshot{
+  width: fit-content;
+}
 
+.hero-screenshot img{
+  padding-right: 1.5rem;
+  max-width: 190px;
+  height: auto;
+}
+
+@media screen and (max-width: 700px){
+  .hero-container{
+    flex-direction: column;
+  }
+}
 
 /*
 =============== 
@@ -439,4 +457,12 @@ Custom scrollbar for all but Firefox
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--primary-200); 
+}
+
+.thankyoutext{
+  padding-inline: 7%;
+  font-size: larger;
+  text-indent: 3%;
+  text-align: justify;
+  color: var(--primary-800);
 }
